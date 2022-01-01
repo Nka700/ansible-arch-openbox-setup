@@ -31,9 +31,9 @@
   become_user: '{{ username }}'
   # core.autocrlf=input prevents https://github.com/robbyrussell/oh-my-zsh/issues/4402
   command: 'curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh'
-  args:
-    chdir: '~{{ username }}'
-    creates: '~{{ username }}/.zplug'
+    #  args:
+    #    chdir: '~{{ username }}'
+    #    creates: '~{{ username }}/.zplug'
 
 #- name: copy zsh dotfile
 #  copy: 
