@@ -1,0 +1,6 @@
+- name: install term browsers
+  community.general.pacman:
+   name:
+    - terminator
+    - kitty
+   state: present

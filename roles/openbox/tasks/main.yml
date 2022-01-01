@@ -1,0 +1,33 @@
+- name: check updates
+  pacman: 
+   update_cache: yes
+   upgrade: yes
+
+# Configure pacman (colorize and repos)
+- include: pacman.yml
+
+# Basic apps (vlc, kitty, etc.)
+- include: core-apps.yml
+
+# Install and configure zsh
+- include: zsh.yml
+  when: setup_zsh == True
+
+# Install openbox 
+- include: openbox.yml
+  when: install_openbox == True
+
+# Web Browser
+- include: "{{browser}}.yml"
+
+# Terminal web browsers
+- include: terminal_browsers.yml
+  when: install_terminal_browsers == True
+
+## AUR apps
+#- include: aur.yml
+#  when: use_aur == True
+#
+## Dotfiles
+#- include: dotfiles.yml
+#  when: pull_dotfiles == True

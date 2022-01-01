@@ -1,0 +1,7 @@
+- name: install LibreOffice Fresh (EN)
+  community.general.pacman:
+   name: 
+    - xorg
+    - lightdm
+    - openbox
+   state: present 
