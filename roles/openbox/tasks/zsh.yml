@@ -22,10 +22,6 @@
      - wheel
    shell: /usr/bin/zsh
 
-- name: Install zplug for users
-  become: yes
-  become_user: '{{ username }}'
-
 - name: Stat zplug
   stat:
     path: "{{ zplug.install_dir }}"
