@@ -23,17 +23,21 @@
    shell: /usr/bin/zsh
 
 - name: Install zplug for users
-  tags:
-    # Suppress warning: [ANSIBLE0006] git used in place of git module
-    # Git module doesn't allow us to set `core.autocrlf=input`.
-    - skip_ansible_lint
   become: yes
   become_user: '{{ username }}'
-  # core.autocrlf=input prevents https://github.com/robbyrussell/oh-my-zsh/issues/4402
-  command: 'curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh'
-    #  args:
-    #    chdir: '~{{ username }}'
-    #    creates: '~{{ username }}/.zplug'
+
+- name: Stat zplug
+  stat:
+    path: "{{ zplug.install_dir }}"
+  register: zplug_dir
+
+- name: Install zplug for users
+  become: yes
+  become_user: '{{ username }}'
+  git:
+    repo: "{{ zplug.git_url }}"
+    dest: "{{ zplug.install_dir }}"
+  when: not zplug_dir.stat.exists
 
 #- name: copy zsh dotfile
 #  copy: 
@@ -52,7 +56,6 @@
 #   owner: "{{ username }}"
 #   group: "{{ username }}"
 #   mode: u+rw,g+r,o--
-
 
 #- name: copy powerlevel10k theme
 #  copy:

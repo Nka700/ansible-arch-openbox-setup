@@ -1,7 +1,17 @@
-- name: install LibreOffice Fresh (EN)
+- name: install openbox
   community.general.pacman:
-   name: 
-    - xorg
-    - lightdm
-    - openbox
-   state: present 
+    name: 
+      - xorg
+      - lightdm
+      - openbox
+    state: present 
+  become: yes
+
+- name: enable lightdm
+  systemd:
+    name: lightdm.service
+#    state: restarted
+    daemon_reload: yes
+    enabled: yes
+  become: yes
+
