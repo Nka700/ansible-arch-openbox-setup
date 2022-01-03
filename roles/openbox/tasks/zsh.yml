@@ -17,12 +17,9 @@
 - name: change "{{ username }}" shell to zsh
   become: yes
   user:
-   name: "{{ username }}"
-   password: "{{ upassword | password_hash('sha512') }}"
-   append: yes
-   groups:
-     - wheel
-   shell: /usr/bin/zsh
+    name: "{{ username }}"
+    append: yes
+    shell: /usr/bin/zsh
 
 - name: Stat zplug
   stat:

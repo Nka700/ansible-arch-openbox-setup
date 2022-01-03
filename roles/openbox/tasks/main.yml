@@ -3,6 +3,9 @@
    update_cache: yes
    upgrade: yes
 
+# Install and configure zsh
+- include: user.yml
+
 # Configure pacman (colorize and repos)
 - include: pacman.yml
 
