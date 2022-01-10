@@ -22,6 +22,8 @@
     shell: /usr/bin/zsh
 
 - name: Stat zplug
+  become: yes
+  become_user: '{{ username }}'
   stat:
     path: "{{ zplug.install_dir }}"
   register: zplug_dir

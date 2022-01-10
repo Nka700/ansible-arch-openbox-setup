@@ -1,4 +1,6 @@
 - name: Stat paru
+  become: yes
+  become_user: '{{ username }}'
   stat:
     path: "{{ paru.install_dir }}"
   register: paru_dir
