@@ -3,6 +3,8 @@
     name: 
       - xorg
       - lightdm
+      - lightdm-gtk-greeter
+      - lightdm-gtk-greeter-settings
       - openbox
       - xfce4-settings
     state: present 
