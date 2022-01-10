@@ -13,6 +13,7 @@
     - source-highlight
     - tree
     - base-devel
+    - openssh
    state: present
 
 - name: Install archival utils
