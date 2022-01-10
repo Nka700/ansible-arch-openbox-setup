@@ -4,7 +4,7 @@
 # for the playbook to function.
 
 ## User info
-username: nka700
+#username: 
 
 ## aur info
 paru:
