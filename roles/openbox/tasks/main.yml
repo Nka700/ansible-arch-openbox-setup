@@ -4,33 +4,33 @@
    upgrade: yes
 
 # Install and configure zsh
-- include: user.yml
+- include_tasks: user.yml
 
 # Configure pacman (colorize and repos)
-- include: pacman.yml
+- include_tasks: pacman.yml
 
 # Basic apps (vlc, kitty, etc.)
-- include: core-apps.yml
+- include_tasks: core-apps.yml
 
 # Install and configure zsh
-- include: zsh.yml
+- include_tasks: zsh.yml
   when: setup_zsh == True
 
 # Install openbox 
-- include: openbox.yml
+- include_tasks: openbox.yml
   when: install_openbox == True
 
 # Web Browser
-- include: "{{browser}}.yml"
+- include_tasks: "{{browser}}.yml"
 
 # Terminal web browsers
-- include: terminal_browsers.yml
+- include_tasks: terminal_browsers.yml
   when: install_terminal_browsers == True
 
 ## AUR apps
-#- include: aur.yml
-#  when: use_aur == True
+- include_tasks: aur.yml
+  when: use_aur == True
 #
 ## Dotfiles
-#- include: dotfiles.yml
+#- include_tasks: dotfiles.yml
 #  when: pull_dotfiles == True

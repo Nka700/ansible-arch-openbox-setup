@@ -1,0 +1,20 @@
+- name: Stat paru
+  stat:
+    path: "{{ paru.install_dir }}"
+  register: paru_dir
+
+- name: Install paru for users_1
+  become: yes
+  become_user: '{{ username }}'
+  git:
+    repo: "{{ paru.git_url }}"
+    dest: "{{ paru.install_dir }}"
+  when: not paru_dir.stat.exists
+
+- name: Install paru for users_2
+  become: yes
+  become_user: '{{ username }}'
+  shell: "{{ paru.install_shell }}"
+  args:
+    chdir: "{{ paru.install_dir }}"
+

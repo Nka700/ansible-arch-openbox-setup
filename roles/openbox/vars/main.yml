@@ -8,8 +8,9 @@ username: nka700
 
 ## aur info
 paru:
-    url: https://github.com/Morganamilo/paru.git
-    destination: work/paru
+  git_url: https://github.com/Morganamilo/paru.git
+  install_dir: ~/paru
+  install_shell: makepkg -si
 
 ## zplug info
 zplug:
@@ -48,7 +49,7 @@ install_aerc: True
 
 ### AUR vars
 ### ===========================
-#use_aur: True
+use_aur: True
 #
 #aur:
 #    dir: aur
