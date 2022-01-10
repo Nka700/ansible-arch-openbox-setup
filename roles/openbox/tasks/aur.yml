@@ -18,5 +18,5 @@
   become_user: '{{ username }}'
   shell: "{{ paru.install_shell }}"
   args:
-    chdir: "{{ paru.install_dir }}"
+    chdir: "{{ paru.build_dir }}"
 
