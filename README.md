@@ -5,5 +5,5 @@ Needs to run from localhost.
 # Usage
 
 ```
-ansible-playbook -i localhost main.yml --extra-vars upassword=${Your Password}
+ansible-playbook -i localhost main.yml --extra-vars "username=${Your user name} upassword=${Your Password}"
 ```
