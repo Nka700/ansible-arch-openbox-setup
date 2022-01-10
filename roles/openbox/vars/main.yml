@@ -9,7 +9,8 @@
 ## aur info
 paru:
   git_url: https://aur.archlinux.org/paru.git
-  install_dir: ~/paru
+  install_dir: /usr/bin/paru
+  build_dir: ~/paru
   install_shell: makepkg -si --noconfirm
 
 ## zplug info
