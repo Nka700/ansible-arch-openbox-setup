@@ -10,7 +10,7 @@ username: nka700
 paru:
   git_url: https://github.com/Morganamilo/paru.git
   install_dir: ~/paru
-  install_shell: makepkg -si
+  install_shell: makepkg -si --noconfirm
 
 ## zplug info
 zplug:

@@ -4,6 +4,7 @@
       - xorg
       - lightdm
       - openbox
+      - xfce4-settings
     state: present 
   become: yes
 
