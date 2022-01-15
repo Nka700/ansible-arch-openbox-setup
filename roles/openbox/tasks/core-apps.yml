@@ -38,3 +38,11 @@
       - wget
     state: present
 
+- name: enable sshd
+  systemd:
+    name: sshd.service
+    state: started
+    daemon_reload: yes
+    enabled: yes
+  become: yes
+
