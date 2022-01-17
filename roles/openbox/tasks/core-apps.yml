@@ -10,6 +10,7 @@
 #    - tmux
 #    - lsd
     - vim
+    - vi
     - source-highlight
     - tree
     - base-devel
@@ -28,6 +29,7 @@
       - bzip2
       - gzip
       - tar
+      - wpa_supplicant
     state: present
 
 - name: Install download utils

@@ -9,3 +9,11 @@
     groups:
       - wheel
 
+- hosts: localhost
+  become: True
+  lineinfile:
+    path: /etc/sudoers
+    state: present
+    regexp: '^#%wheel ALL=(ALL) ALL'
+    line: '%wheel ALL=(ALL) ALL'
+    validate: 'visudo -cf %s'
