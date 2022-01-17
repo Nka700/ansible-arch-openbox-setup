@@ -20,6 +20,7 @@
     - blueman
     - bluez
     - pulseaudio-bluetooth
+    - tint2
    state: present
 
 - name: Install archival utils
