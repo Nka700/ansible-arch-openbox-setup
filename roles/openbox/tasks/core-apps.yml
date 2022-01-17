@@ -15,6 +15,11 @@
     - tree
     - base-devel
     - openssh
+    - xfce4-terminal
+    - wpa_supplicant
+    - blueman
+    - bluez
+    - pulseaudio-bluetooth
    state: present
 
 - name: Install archival utils
@@ -29,7 +34,6 @@
       - bzip2
       - gzip
       - tar
-      - wpa_supplicant
     state: present
 
 - name: Install download utils
