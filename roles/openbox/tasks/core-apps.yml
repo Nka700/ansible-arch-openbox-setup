@@ -6,9 +6,6 @@
     - vlc
     - gimp
     - git
-#    - thefuck
-#    - tmux
-#    - lsd
     - vim
     - vi
     - source-highlight
@@ -21,6 +18,8 @@
     - bluez
     - pulseaudio-bluetooth
     - tint2
+    - NetworkManager
+    - archlinux-keyring
    state: present
 
 - name: Install archival utils
