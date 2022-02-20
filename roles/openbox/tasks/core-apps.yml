@@ -26,7 +26,7 @@
 - name: Install archival utils
   pacman:
     name:
-      - atool
+#      - atool
 #      - p7zip
       - unrar
       - unzip
