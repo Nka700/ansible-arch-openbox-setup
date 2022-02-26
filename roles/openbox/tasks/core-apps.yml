@@ -42,6 +42,7 @@
 #      - aria2
       - curl
       - wget
+      - flatpak
     state: present
 
 - name: enable sshd

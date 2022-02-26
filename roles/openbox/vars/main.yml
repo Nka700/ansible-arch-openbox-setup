@@ -13,6 +13,10 @@ paru:
   build_dir: ~/paru
   install_shell: makepkg -si --noconfirm
 
+## paru pkg install
+paru_pkg:
+  install_shell: paru -S --noconfirm obmenu obmenu-generator
+
 ## zplug info
 zplug:
   git_url: https://github.com/zplug/zplug
@@ -26,8 +30,8 @@ setup_zsh: True
 pull_dotfiles: True
 
 dotfiles:
-    url: https://github.com/linuxpiper/dotfiles.git
-    destination: projects/dotfiles
+    url: https://github.com/Nka700/.dotfiles.git
+    destination: work/dotfiles
     rcup_flags: -fx README.md
 
 ## Desktop
