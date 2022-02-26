@@ -19,7 +19,9 @@
     - pulseaudio-bluetooth
     - tint2
     - networkmanager
+    - networkmanager-openvpn
     - archlinux-keyring
+    - htop
    state: present
 
 - name: Install archival utils
