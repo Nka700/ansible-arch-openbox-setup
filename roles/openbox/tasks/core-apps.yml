@@ -18,7 +18,7 @@
     - bluez
     - pulseaudio-bluetooth
     - tint2
-    - NetworkManager
+    - networkmanager
     - archlinux-keyring
    state: present
 
