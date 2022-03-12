@@ -26,5 +26,5 @@
 #  shell: "{{ paru_pkg.install_shell }}"
   pacman:
     executable: paru
-    name: '{{ paru.packages }}'
+    name: '{{ aur.packages }}'
     state: present

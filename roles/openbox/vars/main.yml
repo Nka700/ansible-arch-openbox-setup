@@ -14,7 +14,7 @@ paru:
   install_shell: makepkg -si --noconfirm
 
 ## paru pkg install
-paru:
+aur:
   packages:
     - obmenu
     - obmenu-generator
