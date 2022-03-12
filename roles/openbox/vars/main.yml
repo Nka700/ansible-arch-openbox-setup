@@ -14,8 +14,12 @@ paru:
   install_shell: makepkg -si --noconfirm
 
 ## paru pkg install
-paru_pkg:
-  install_shell: paru -S --noconfirm obmenu obmenu-generator
+paru:
+  packages:
+    - obmenu
+    - obmenu-generator
+    - nitrogen
+#  install_shell: paru -S --noconfirm obmenu obmenu-generator
 
 ## zplug info
 zplug:
