@@ -3,10 +3,6 @@
    name:
     - xorg
     - kitty
-    - vlc
-    - gimp
-    - git
-    - vim
     - vi
     - source-highlight
     - tree
@@ -14,9 +10,6 @@
     - openssh
     - xfce4-terminal
     - wpa_supplicant
-    - blueman
-    - bluez
-    - pulseaudio-bluetooth
     - tint2
     - networkmanager
     - networkmanager-openvpn
@@ -51,6 +44,18 @@
 - name: Install extra packages
   pacman:
     name:
+      - fcitx5
+      - fcitx5-configtool
+      - fcitx5-gtk
+      - fcitx5-mozc
+      - fcitx5-qt
+      - vlc
+      - gimp
+      - git
+      - vim
+      - blueman
+      - bluez
+      - pulseaudio-bluetooth
       - noto-fonts-cjk
       - noto-fonts-emoji
       - docker
