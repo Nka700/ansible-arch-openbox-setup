@@ -48,6 +48,9 @@
 #  shell: "{{ paru_pkg.install_shell }}"
   pacman:
     executable: yay
-    name: '{{ aur.packages }}'
+    name:
+      - obmenu
+      - obmenu-generator
+      - nitrogen
     state: present
 
