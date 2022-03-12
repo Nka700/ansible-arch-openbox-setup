@@ -20,12 +20,12 @@ yay:
   install_shell: makepkg -si --noconfirm
 
 ## paru pkg install
-aur:
-  packages:
-    - obmenu
-    - obmenu-generator
-    - nitrogen
-#  install_shell: paru -S --noconfirm obmenu obmenu-generator
+#aur:
+#  packages:
+#    - obmenu
+#    - obmenu-generator
+#    - nitrogen
+  install_shell: paru -S --noconfirm obmenu obmenu-generator nitrogen
 
 ## zplug info
 zplug:
@@ -62,27 +62,13 @@ install_office: True
 ## Console-based email client
 install_aerc: True
 
-### AUR vars
-### ===========================
+## AUR vars
 use_aur: True
-#
-#aur:
-#    dir: aur
-#    packages:
-#        - paru
-#        - downgrade
-##        - zplug
-#        - miller
-#        - myrepos
-#        - ctmg
-#        - spiped
-### ===========================
-
 
 ## python packages
 python:
-    packages:
-        - pynvim  
+  packages:
+    - pynvim
 
 ## Installs python packages
 install_pythonpkg: True
