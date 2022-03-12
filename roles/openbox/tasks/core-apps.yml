@@ -60,10 +60,7 @@
 - name: Install python packages
   pip:
     name:
-      - noto-fonts-cjk
-      - noto-fonts-emoji
-      - docker
-      - docker-compose
+      - pynvim
     state: present
 
 - name: enable sshd
