@@ -1,7 +1,6 @@
 - name: check updates
   pacman: 
    update_cache: yes
-   upgrade: yes
 
 # Install and configure zsh
 - include_tasks: user.yml
