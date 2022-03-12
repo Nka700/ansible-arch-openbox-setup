@@ -20,12 +20,12 @@ yay:
   install_shell: makepkg -si --noconfirm
 
 ## paru pkg install
-#aur:
+aur:
 #  packages:
 #    - obmenu
 #    - obmenu-generator
 #    - nitrogen
-  install_shell: paru -S --noconfirm obmenu obmenu-generator nitrogen
+  pkg_install_shell: paru -S --noconfirm obmenu obmenu-generator nitrogen
 
 ## zplug info
 zplug:

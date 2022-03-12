@@ -23,5 +23,5 @@
 - name: Install aur pkg for users
   become: yes
   become_user: '{{ username }}'
-  shell: "{{ paru_pkg.install_shell }}"
+  shell: "{{ aur.pkg_install_shell }}"
 
