@@ -20,11 +20,34 @@
   args:
     chdir: "{{ paru.build_dir }}"
 
+- name: Stat yay
+  become: yes
+  become_user: '{{ username }}'
+  stat:
+    path: "{{ yay.install_dir }}"
+  register: yay_dir
+
+- name: Install yay for users_1
+  become: yes
+  become_user: '{{ username }}'
+  git:
+    repo: "{{ yay.git_url }}"
+    dest: "{{ yay.build_dir }}"
+  when: not yay_dir.stat.exists
+
+- name: Install yay for users_2
+  become: yes
+  become_user: '{{ username }}'
+  shell: "{{ yay.install_shell }}"
+  args:
+    chdir: "{{ yay.build_dir }}"
+
 - name: Install aur pkg for users
   become: yes
   become_user: '{{ username }}'
 #  shell: "{{ paru_pkg.install_shell }}"
   pacman:
-    executable: paru
+    executable: yay
     name: '{{ aur.packages }}'
     state: present
+

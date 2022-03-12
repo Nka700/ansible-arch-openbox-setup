@@ -13,6 +13,12 @@ paru:
   build_dir: ~/paru
   install_shell: makepkg -si --noconfirm
 
+yay:
+  git_url: https://aur.archlinux.org/yay.git
+  install_dir: /usr/bin/yay
+  build_dir: ~/yay
+  install_shell: makepkg -si --noconfirm
+
 ## paru pkg install
 aur:
   packages:
