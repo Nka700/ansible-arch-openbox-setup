@@ -1,0 +1,6 @@
+- name: Install python pkg for user
+  become: yes
+  become_user: '{{ username }}'
+  pip:
+    name: "{{ python.packages }}"
+

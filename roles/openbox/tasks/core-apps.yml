@@ -45,6 +45,25 @@
       - curl
       - wget
       - flatpak
+      - python-pip
+    state: present
+
+- name: Install extra packages
+  pacman:
+    name:
+      - noto-fonts-cjk
+      - noto-fonts-emoji
+      - docker
+      - docker-compose
+    state: present
+
+- name: Install python packages
+  pip:
+    name:
+      - noto-fonts-cjk
+      - noto-fonts-emoji
+      - docker
+      - docker-compose
     state: present
 
 - name: enable sshd

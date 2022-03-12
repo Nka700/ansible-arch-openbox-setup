@@ -68,3 +68,11 @@ use_aur: True
 #        - spiped
 ### ===========================
 
+
+## python packages
+python:
+    packages:
+        - pynvim  
+
+## Installs python packages
+install_pythonpkg: True
