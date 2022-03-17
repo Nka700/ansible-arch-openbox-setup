@@ -52,7 +52,7 @@
       - vlc
       - gimp
       - git
-      - vim
+      - gvim
       - blueman
       - bluez
       - pulseaudio-bluetooth
