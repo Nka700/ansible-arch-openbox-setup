@@ -34,6 +34,10 @@
 ## python apps
 - include_tasks: pythonpkg.yml
   when: install_pythonpkg == True
+
+# add user to group
+- include_tasks: group.yml
+
 #
 ## Dotfiles
 #- include_tasks: dotfiles.yml
