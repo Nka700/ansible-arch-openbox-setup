@@ -55,11 +55,15 @@
       - gvim
       - blueman
       - bluez
+      - pulseaudio
       - pulseaudio-bluetooth
+      - pavucontrol
       - noto-fonts-cjk
       - noto-fonts-emoji
       - docker
       - docker-compose
+      - lshw
+      - rofi
     state: present
 
 - name: Install python packages
