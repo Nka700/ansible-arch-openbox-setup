@@ -25,7 +25,7 @@ aur:
 #    - obmenu
 #    - obmenu-generator
 #    - nitrogen
-  pkg_install_shell: paru -S --noconfirm obmenu obmenu-generator nitrogen
+  pkg_install_shell: paru -S --noconfirm obmenu obmenu-generator nitrogen rcm
 
 ## zplug info
 zplug:
@@ -41,8 +41,8 @@ pull_dotfiles: True
 
 dotfiles:
     url: https://github.com/Nka700/.dotfiles.git
-    destination: work/dotfiles
-    rcup_flags: -fx README.md
+    destination: ~/.dotfiles
+    rcup_flags: -f
 
 ## Desktop
 install_openbox: True
