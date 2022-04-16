@@ -39,6 +39,6 @@
 - include_tasks: group.yml
 
 #
-## Dotfiles
-#- include_tasks: dotfiles.yml
+# Dotfiles
+- include_tasks: dotfiles.yml
 #  when: pull_dotfiles == True
