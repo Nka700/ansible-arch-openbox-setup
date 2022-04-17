@@ -15,7 +15,8 @@
     - networkmanager-openvpn
     - archlinux-keyring
     - htop
-   state: present
+   state: latest
+   update_cache: yes
 
 - name: Install archival utils
   pacman:
