@@ -42,6 +42,8 @@ pull_dotfiles: True
 dotfiles:
     url: https://github.com/Nka700/.dotfiles.git
     destination: ~/.dotfiles
+    conkyrc1_destination: ~/.dotfiles/config/conky/.conkyrc
+    conkyrc2_destination: ~/.dotfiles/config/conky/.conkyrc2
     rcup_flags: -f
 
 ## Desktop
