@@ -19,3 +19,20 @@
   command: rcup "{{ dotfiles.rcup_flags }}"
   become: yes
   become_user: "{{ username }}" 
+
+- name: link conkyrc1 
+  file:
+    src: "{{ dotfiles.destination }}"/cofig/conky/conkyrc
+    dest: ~/.config/conky/.conkyrc
+    state: link
+  become: yes
+  become_user: "{{ username }}"
+
+- name: link conkyrc2 
+  file:
+    src: "{{ dotfiles.destination }}"/cofig/conky/conkyrc2
+    dest: ~/.config/conky/.conkyrc2
+    state: link
+  become: yes
+  become_user: "{{ username }}"
+

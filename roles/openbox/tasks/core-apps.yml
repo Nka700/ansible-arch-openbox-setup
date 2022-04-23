@@ -9,12 +9,15 @@
     - base-devel
     - openssh
     - xfce4-terminal
+    - xfce4-power-manager
     - wpa_supplicant
     - tint2
     - networkmanager
     - networkmanager-openvpn
+    - network-manager-applet
     - archlinux-keyring
     - htop
+    - picom
    state: latest
    update_cache: yes
 
@@ -66,6 +69,8 @@
       - lshw
       - rofi
       - redshift
+      - noto-fonts-cjk
+      - noto-fonts-emoji
     state: present
 
 - name: Install python packages
