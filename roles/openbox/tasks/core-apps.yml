@@ -62,6 +62,7 @@
       - pulseaudio
       - pulseaudio-bluetooth
       - pavucontrol
+      - slock
       - noto-fonts-cjk
       - noto-fonts-emoji
       - docker
