@@ -22,7 +22,7 @@
 
 - name: link conkyrc1 
   file:
-    src: "{{ dotfiles.destination }}"/cofig/conky/conkyrc
+    src: "{{ dotfiles.destination }}"/config/conky/conkyrc
     dest: ~/.config/conky/.conkyrc
     state: link
   become: yes
@@ -30,7 +30,7 @@
 
 - name: link conkyrc2 
   file:
-    src: "{{ dotfiles.destination }}"/cofig/conky/conkyrc2
+    src: "{{ dotfiles.destination }}"/config/conky/conkyrc2
     dest: ~/.config/conky/.conkyrc2
     state: link
   become: yes
