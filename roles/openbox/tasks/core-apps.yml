@@ -55,9 +55,11 @@
       - fcitx5-mozc
       - fcitx5-qt
       - vlc
+      - mpv
       - gimp
       - git
       - gvim
+      - jq
       - blueman
       - bluez
       - pulseaudio
@@ -73,6 +75,11 @@
       - redshift
       - noto-fonts-cjk
       - noto-fonts-emoji
+      - nvidia
+      - nvidia-dkms
+      - nvidia-settings
+      - nvidia-utils
+      - xf86-video-nouveau
     state: present
 
 - name: Install python packages
