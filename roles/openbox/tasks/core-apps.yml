@@ -48,6 +48,7 @@
 - name: Install extra packages
   pacman:
     name:
+      - arch-audit-gtk
       - conky
       - fcitx5
       - fcitx5-configtool
