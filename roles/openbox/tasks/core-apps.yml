@@ -81,6 +81,7 @@
       - nvidia-settings
       - nvidia-utils
       - xf86-video-nouveau
+      - gsimplecal
     state: present
 
 - name: Install python packages
