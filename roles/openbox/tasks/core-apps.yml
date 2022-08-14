@@ -48,6 +48,7 @@
 - name: Install extra packages
   pacman:
     name:
+      - arch-audit-gtk
       - conky
       - fcitx5
       - fcitx5-configtool
@@ -55,10 +56,12 @@
       - fcitx5-mozc
       - fcitx5-qt
       - vlc
+      - mpv
       - gimp
       - git
       - gvim
       - gsimplecal
+      - jq
       - blueman
       - bluez
       - pulseaudio
@@ -74,6 +77,12 @@
       - redshift
       - noto-fonts-cjk
       - noto-fonts-emoji
+      - nvidia
+      - nvidia-dkms
+      - nvidia-settings
+      - nvidia-utils
+      - xf86-video-nouveau
+      - gsimplecal
     state: present
 
 - name: Install python packages
