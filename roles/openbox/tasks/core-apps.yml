@@ -59,7 +59,7 @@
       - mpv
       - gimp
       - git
-      - gvim
+#      - gvim
       - gsimplecal
       - jq
       - blueman
@@ -78,7 +78,7 @@
       - noto-fonts-cjk
       - noto-fonts-emoji
       - nvidia
-      - nvidia-dkms
+#      - nvidia-dkms
       - nvidia-settings
       - nvidia-utils
       - xf86-video-nouveau
