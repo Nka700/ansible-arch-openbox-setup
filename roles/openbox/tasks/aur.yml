@@ -21,8 +21,8 @@
     chdir: "{{ paru.build_dir }}"
   when: not paru_dir.stat.exists
 
-- name: Install aur pkg for users
-  become: yes
-  become_user: '{{ username }}'
-  shell: "{{ aur.pkg_install_shell }}"
+#- name: Install aur pkg for users
+#  become: yes
+#  become_user: '{{ username }}'
+#  shell: "{{ aur.pkg_install_shell }}"
 
