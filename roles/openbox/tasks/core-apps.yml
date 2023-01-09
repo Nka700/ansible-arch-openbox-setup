@@ -18,6 +18,7 @@
     - archlinux-keyring
     - htop
     - picom
+    - python-setuptools
    state: latest
    update_cache: yes
 
