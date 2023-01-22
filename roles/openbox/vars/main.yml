@@ -12,28 +12,13 @@ paru:
   install_dir: /usr/bin/paru
   build_dir: ~/paru
   install_shell: makepkg -si --noconfirm
+  pkg_install_shell: paru -S --noconfirm obmenu obmenu-generator nitrogen rcm
 
 yay:
   git_url: https://aur.archlinux.org/yay.git
   install_dir: /usr/bin/yay
   build_dir: ~/yay
   install_shell: makepkg -si --noconfirm
-
-## paru pkg install
-paru:
-#  packages:
-#    - obmenu
-#    - obmenu-generator
-#    - nitrogen
-  pkg_install_shell: paru -S --noconfirm obmenu obmenu-generator nitrogen rcm
-
-
-## yay pkg install
-yay:
-#  packages:
-#    - obmenu
-#    - obmenu-generator
-#    - nitrogen
   pkg_install_shell: yay -S --noconfirm obmenu obmenu-generator nitrogen rcm
 
 ## zplug info
