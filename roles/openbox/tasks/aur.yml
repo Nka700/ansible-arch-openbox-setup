@@ -39,7 +39,7 @@
   git:
     repo: "{{ yay.git_url }}"
     dest: "{{ yay.build_dir }}"
-  when: yay_dir.stat.exists == false
+  when: not yay_dir.stat.exists
 
 - name: Install yay for users_2
   become: yes
@@ -47,7 +47,7 @@
   shell: "{{ yay.install_shell }}"
   args:
     chdir: "{{ yay.build_dir }}"
-  when: yay_dir.stat.exists == false
+  when: not yay_dir.stat.exists
 
 - name: Install aur pkg for users
   become: yes
