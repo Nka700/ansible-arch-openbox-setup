@@ -21,6 +21,11 @@
 #    chdir: "{{ paru.build_dir }}"
 #  when: not paru_dir.stat.exists
 
+#- name: Install aur pkg for users
+#  become: yes
+#  become_user: '{{ username }}'
+#  shell: "{{ paru.pkg_install_shell }}"
+
 - name: Stat yay
   become: yes
   become_user: '{{ username }}'
@@ -44,8 +49,8 @@
     chdir: "{{ yay.build_dir }}"
   when: not yay_dir.stat.exists
 
-#- name: Install aur pkg for users
-#  become: yes
-#  become_user: '{{ username }}'
-#  shell: "{{ aur.pkg_install_shell }}"
+- name: Install aur pkg for users
+  become: yes
+  become_user: '{{ username }}'
+  shell: "{{ yay.pkg_install_shell }}"
 

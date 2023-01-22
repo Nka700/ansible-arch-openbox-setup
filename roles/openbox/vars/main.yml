@@ -20,12 +20,21 @@ yay:
   install_shell: makepkg -si --noconfirm
 
 ## paru pkg install
-aur:
+paru:
 #  packages:
 #    - obmenu
 #    - obmenu-generator
 #    - nitrogen
   pkg_install_shell: paru -S --noconfirm obmenu obmenu-generator nitrogen rcm
+
+
+## yay pkg install
+yay:
+#  packages:
+#    - obmenu
+#    - obmenu-generator
+#    - nitrogen
+  pkg_install_shell: yay -S --noconfirm obmenu obmenu-generator nitrogen rcm
 
 ## zplug info
 zplug:
