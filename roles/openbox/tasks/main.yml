@@ -30,7 +30,6 @@
 - include_tasks: aur.yml
   when: use_aur == True
 
-    
 ## python apps
 - include_tasks: pythonpkg.yml
   when: install_pythonpkg == True

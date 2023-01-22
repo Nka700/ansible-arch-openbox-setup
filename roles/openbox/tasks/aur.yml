@@ -1,25 +1,48 @@
-- name: Stat paru
+#- name: Stat paru
+#  become: yes
+#  become_user: '{{ username }}'
+#  stat:
+#    path: "{{ paru.install_dir }}"
+#  register: paru_dir
+#
+#- name: Install paru for users_1
+#  become: yes
+#  become_user: '{{ username }}'
+#  git:
+#    repo: "{{ paru.git_url }}"
+#    dest: "{{ paru.build_dir }}"
+#  when: not paru_dir.stat.exists
+#
+#- name: Install paru for users_2
+#  become: yes
+#  become_user: '{{ username }}'
+#  shell: "{{ paru.install_shell }}"
+#  args:
+#    chdir: "{{ paru.build_dir }}"
+#  when: not paru_dir.stat.exists
+
+- name: Stat yay
   become: yes
   become_user: '{{ username }}'
   stat:
-    path: "{{ paru.install_dir }}"
-  register: paru_dir
+    path: "{{ yay.install_dir }}"
+  register: yay_dir
 
-- name: Install paru for users_1
+- name: Install yay for users_1
   become: yes
   become_user: '{{ username }}'
   git:
-    repo: "{{ paru.git_url }}"
-    dest: "{{ paru.build_dir }}"
-  when: not paru_dir.stat.exists
+    repo: "{{ yay.git_url }}"
+    dest: "{{ yay.build_dir }}"
+  when: not yay_dir.stat.exists
 
-- name: Install paru for users_2
+- name: Install yay for users_2
   become: yes
   become_user: '{{ username }}'
-  shell: "{{ paru.install_shell }}"
+  shell: "{{ yay.install_shell }}"
   args:
-    chdir: "{{ paru.build_dir }}"
-  when: not paru_dir.stat.exists
+    chdir: "{{ yay.build_dir }}"
+  when: not yay_dir.stat.exists
 
 #- name: Install aur pkg for users
 #  become: yes
