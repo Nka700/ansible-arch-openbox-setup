@@ -25,6 +25,7 @@
 #  become: yes
 #  become_user: '{{ username }}'
 #  shell: "{{ paru.pkg_install_shell }}"
+#  ignore_errors: yes
 
 - name: Stat yay
   become: yes
@@ -53,4 +54,4 @@
   become: yes
   become_user: '{{ username }}'
   shell: "{{ yay.pkg_install_shell }}"
-
+  ignore_errors: yes
