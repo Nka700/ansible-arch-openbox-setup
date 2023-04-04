@@ -68,6 +68,7 @@
       - pulseaudio
       - pulseaudio-bluetooth
       - pavucontrol
+      - pamixer
       - slock
       - noto-fonts-cjk
       - noto-fonts-emoji
