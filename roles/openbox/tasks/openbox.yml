@@ -1,7 +1,6 @@
 - name: install openbox
   community.general.pacman:
     name: 
-      - xorg
       - lightdm
       - lightdm-gtk-greeter
       - lightdm-gtk-greeter-settings

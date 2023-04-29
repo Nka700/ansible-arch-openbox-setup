@@ -50,8 +50,8 @@
     chdir: "{{ yay.build_dir }}"
   when: not yay_dir.stat.exists
 
-- name: Install aur pkg for users
-  become: yes
-  become_user: '{{ username }}'
-  shell: "{{ yay.pkg_install_shell }}"
-  ignore_errors: yes
+#- name: Install aur pkg for users
+#  become: yes
+#  become_user: '{{ username }}'
+#  shell: "{{ yay.pkg_install_shell }}"
+#  ignore_errors: yes
