@@ -37,7 +37,7 @@
   pacman:
     name:
 #      - atool
-#      - p7zip
+      - p7zip
       - unrar
       - unzip
       - xz
@@ -97,6 +97,7 @@
       - slock
       - vlc
       - whois
+      - wireguard-tools
       - xf86-video-nouveau
 #      - gvim
 #      - nvidia-dkms
