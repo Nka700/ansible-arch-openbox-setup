@@ -30,6 +30,7 @@
     - xorg-xinput
     - xorg-xwininfo
     - xorg-xdpyinfo
+    - man-db
    state: latest
    update_cache: yes
 
