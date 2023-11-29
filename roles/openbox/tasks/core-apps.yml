@@ -63,6 +63,7 @@
     name:
       - arch-audit-gtk
       - bashtop
+      - bat
       - blueman
       - bluez
       - conky
