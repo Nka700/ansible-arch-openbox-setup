@@ -5,6 +5,7 @@
     - acpi
     - acpilight
     - bind
+    - inetutils
     - strace
     - sysstat
     - jgmenu
