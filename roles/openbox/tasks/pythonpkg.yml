@@ -1,6 +1,7 @@
-- name: Install python pkg for user
-  become: yes
-  become_user: '{{ username }}'
-  pip:
-    name: "{{ python.packages }}"
+#due to `× This environment is externally managed` error, fixed to use pacman for installing packages."
+#- name: Install python pkg for user
+#  become: yes
+#  become_user: '{{ username }}'
+#  pip:
+#    name: "{{ python.packages }}"
 

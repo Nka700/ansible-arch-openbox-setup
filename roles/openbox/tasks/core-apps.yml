@@ -102,15 +102,17 @@
       - whois
       - wireguard-tools
       - xf86-video-nouveau
-#      - gvim
+      - gvim
+      - python-pynvim
 #      - nvidia-dkms
     state: present
 
-- name: Install python packages
-  pip:
-    name:
-      - pynvim
-    state: present
+#due to `× This environment is externally managed` error, fixed to use pacman for installing packages."
+#- name: Install python packages
+#  pip:
+#    name:
+#      - pynvim
+#    state: present
 
 - name: enable sshd
   systemd:
