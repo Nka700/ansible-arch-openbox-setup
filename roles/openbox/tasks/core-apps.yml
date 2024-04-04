@@ -5,6 +5,7 @@
     - acpi
     - acpilight
     - bind
+    - cronie
     - inetutils
     - strace
     - sysstat
@@ -20,6 +21,7 @@
     - networkmanager-openvpn
     - openssh
     - picom
+    - parted
     - python-setuptools
     - source-highlight
     - tint2
