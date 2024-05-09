@@ -20,9 +20,11 @@
     - openssh
     - picom
     - python-setuptools
+    - powertop
     - source-highlight
     - tint2
     - tree
+    - tls
     - vi
     - wpa_supplicant
     - xfce4-power-manager
