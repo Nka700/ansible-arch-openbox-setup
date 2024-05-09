@@ -15,10 +15,18 @@
   become: yes
   become_user: "{{ username }}"
 
-- name: Install user dotfiles
-  command: rcup "{{ dotfiles.rcup_flags }}"
+#- name: Install user dotfiles
+#  command: rcup "{{ dotfiles.rcup_flags }}"
+#  become: yes
+#  become_user: "{{ username }}" 
+
+- name: mkdir for conky dotfiles
+  file:
+    path: ~/.config/conky
+    state: directory
+    mode: '0755'
   become: yes
-  become_user: "{{ username }}" 
+  become_user: "{{ username }}"
 
 - name: link conkyrc1 
   file:
