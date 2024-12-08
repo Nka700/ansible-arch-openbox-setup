@@ -41,3 +41,7 @@
 # Dotfiles
 - include_tasks: dotfiles.yml
 #  when: pull_dotfiles == True
+
+# Configure tlp
+- include_tasks: tlp.yml
+  when: configure_tlp == True

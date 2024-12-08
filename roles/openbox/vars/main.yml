@@ -38,7 +38,7 @@ dotfiles:
     destination: ~/.dotfiles
     conkyrc1_destination: ~/.dotfiles/config/conky/.conkyrc
     conkyrc2_destination: ~/.dotfiles/config/conky/.conkyrc2
-    rcup_flags: -f
+#    rcup_flags: -f
 
 ## Desktop
 install_openbox: True
@@ -68,3 +68,7 @@ python:
 
 ## Installs python packages
 install_pythonpkg: True
+
+
+## tlp vars
+configure_tlp: True
