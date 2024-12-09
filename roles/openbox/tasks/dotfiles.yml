@@ -39,21 +39,21 @@
     - { src: "{{ dotfiles.s3_cp_pacman_pkg_caches_destination }}", dest: "~/.local/bin/s3_cp_var_cache_pacman_pkg" }
     - { src: "{{ dotfiles.speedtest_destination }}", dest: "~/.local/bin/speedtest-cli" }
     - { src: "{{ dotfiles.youtube_transcript_api_destination }}", dest: "~/.local/bin/youtube_transcript_api" }
-    - { src: "{{ dotfiles.fcitx5_destination }", dest: "~/.config/fcitx5/config" }
-    - { src: "{{ dotfiles.jgmenu_append_destination }", dest: "~/.config/jgmenu/append.csv" }
-    - { src: "{{ dotfiles.jgmenu_rc_destination }", dest: "~/.config/jgmenu/jgmenurc" }
-    - { src: "{{ dotfiles.jgmenu_prepend_destination }", dest: "~/.config/jgmenu/prepend.csv" }
-    - { src: "{{ dotfiles.picom_destination }", dest: "~/.config/picom.conf" }
-    - { src: "{{ dotfiles.redshift_destination }", dest: "~/.config/redshift.conf" }
-    - { src: "{{ dotfiles.rofi_config_destination }", dest: "~/.config/rofi/config.rasi" }
-    - { src: "{{ dotfiles.tint2rc_destination }", dest: "~/.config/tint2/tint2rc" }
-    - { src: "{{ dotfiles.xfce_keyboard_destination }", dest: "~/.config/xfce4/xfconf/xfce-perchannel-xml/keyboards.xml" }
-    - { src: "{{ dotfiles.xfce_desktop_destination }", dest: "~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml" }
-    - { src: "{{ dotfiles.xfce_keyboard_shortcuts_destination }", dest: "~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml" }
-    - { src: "{{ dotfiles.xfce_panel_destination }", dest: "~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml" }
-    - { src: "{{ dotfiles.xfce_power_manager_destination }", dest: "~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-power-manager.xml" }
-    - { src: "{{ dotfiles.xfce_settings_editor_destination }", dest: "~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-settings-editor.xml" }
-    - { src: "{{ dotfiles.xfce_settings_manager_destination }", dest: "~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-settings-manager.xml" }
-    - { src: "{{ dotfiles.xfwm4_destination }", dest: "~/.config/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml" }
+    - { src: "{{ dotfiles.fcitx5_destination }}", dest: "~/.config/fcitx5/config" }
+    - { src: "{{ dotfiles.jgmenu_append_destination }}", dest: "~/.config/jgmenu/append.csv" }
+    - { src: "{{ dotfiles.jgmenu_rc_destination }}", dest: "~/.config/jgmenu/jgmenurc" }
+    - { src: "{{ dotfiles.jgmenu_prepend_destination }}", dest: "~/.config/jgmenu/prepend.csv" }
+    - { src: "{{ dotfiles.picom_destination }}", dest: "~/.config/picom.conf" }
+    - { src: "{{ dotfiles.redshift_destination }}", dest: "~/.config/redshift.conf" }
+    - { src: "{{ dotfiles.rofi_config_destination }}", dest: "~/.config/rofi/config.rasi" }
+    - { src: "{{ dotfiles.tint2rc_destination }}", dest: "~/.config/tint2/tint2rc" }
+    - { src: "{{ dotfiles.xfce_keyboard_destination }}", dest: "~/.config/xfce4/xfconf/xfce-perchannel-xml/keyboards.xml" }
+    - { src: "{{ dotfiles.xfce_desktop_destination }}", dest: "~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml" }
+    - { src: "{{ dotfiles.xfce_keyboard_shortcuts_destination }}", dest: "~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml" }
+    - { src: "{{ dotfiles.xfce_panel_destination }}", dest: "~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml" }
+    - { src: "{{ dotfiles.xfce_power_manager_destination }}", dest: "~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-power-manager.xml" }
+    - { src: "{{ dotfiles.xfce_settings_editor_destination }}", dest: "~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-settings-editor.xml" }
+    - { src: "{{ dotfiles.xfce_settings_manager_destination }}", dest: "~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-settings-manager.xml" }
+    - { src: "{{ dotfiles.xfwm4_destination }}", dest: "~/.config/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml" }
   become: yes
   become_user: "{{ username }}"
