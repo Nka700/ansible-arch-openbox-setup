@@ -25,6 +25,6 @@
   become: yes
   become_user: "{{ username }}"
   loop:
-    - { src: "{{ dotfiles.kitty_destination }", dest: "~/.config/kitty/kitty.conf" }
-    - { src: "{{ dotfiles.terminator_destination }", dest: "~/.config/terminator/config" }
+    - { src: "{{ dotfiles.kitty_destination }}", dest: "~/.config/kitty/kitty.conf" }
+    - { src: "{{ dotfiles.terminator_destination }}", dest: "~/.config/terminator/config" }
 
