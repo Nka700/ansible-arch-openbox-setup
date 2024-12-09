@@ -35,8 +35,8 @@
     - { src: "{{ dotfiles.mpvy_destination }}", dest: "~/.local/bin/mpvy" }
     - { src: "{{ dotfiles.pulsedroid_server_destination }}", dest: "~/.local/bin/pulsedroid_server.sh" }
     - { src: "{{ dotfiles.rofi_run_destination }}", dest: "~/.local/bin/rofi_run" }
-    - { src: "{{ dotfiles.s3_cp_chatgpt_destination }}", dest: "~/.local/bin/s3_cp_chatgpt-session" }
-    - { src: "{{ dotfiles.s3_cp_pacman_pkg_caches_destination }}", dest: "~/.local/bin/s3_cp_var_cache_pacman_pkg" }
+#    - { src: "{{ dotfiles.s3_cp_chatgpt_destination }}", dest: "~/.local/bin/s3_cp_chatgpt-session" }
+#    - { src: "{{ dotfiles.s3_cp_pacman_pkg_caches_destination }}", dest: "~/.local/bin/s3_cp_var_cache_pacman_pkg" }
     - { src: "{{ dotfiles.speedtest_destination }}", dest: "~/.local/bin/speedtest-cli" }
     - { src: "{{ dotfiles.youtube_transcript_api_destination }}", dest: "~/.local/bin/youtube_transcript_api" }
     - { src: "{{ dotfiles.fcitx5_destination }}", dest: "~/.config/fcitx5/config" }
