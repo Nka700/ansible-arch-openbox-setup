@@ -17,3 +17,43 @@
     enabled: yes
   become: yes
 
+- name: mkdir for openbox dotfiles
+  file:
+    path: ~/.config/openbox
+    state: directory
+    mode: '0755'
+  become: yes
+  become_user: "{{ username }}"
+
+- name: link openbox autostart  
+  file:
+    src: "{{ dotfiles.openbox_autostart_destination }}"
+    dest: ~/.config/openbox/autostart
+    state: link
+  become: yes
+  become_user: "{{ username }}"
+
+- name: link openbox environment  
+  file:
+    src: "{{ dotfiles.openbox_environment_destination }}"
+    dest: ~/.config/openbox/environment
+    state: link
+  become: yes
+  become_user: "{{ username }}"
+
+- name: link openbox rc.xml
+  file:
+    src: "{{ dotfiles.openbox_rcxml_destination }}"
+    dest: ~/.config/openbox/rc.xml
+    state: link
+  become: yes
+  become_user: "{{ username }}"
+
+- name: link xprofile  
+  file:
+    src: "{{ dotfiles.xprofile_destination }}"
+    dest: ~/.xprofile
+    state: link
+  become: yes
+  become_user: "{{ username }}"
+

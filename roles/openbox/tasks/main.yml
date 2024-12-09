@@ -37,10 +37,12 @@
 # add user to group
 - include_tasks: group.yml
 
-#
 # Dotfiles
 - include_tasks: dotfiles.yml
 #  when: pull_dotfiles == True
+
+# authorized_keys
+- include_tasks: authorized_keys.yml
 
 # Configure tlp
 - include_tasks: tlp.yml

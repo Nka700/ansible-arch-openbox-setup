@@ -38,7 +38,40 @@ dotfiles:
     destination: ~/.dotfiles
     conkyrc1_destination: ~/.dotfiles/config/conky/.conkyrc
     conkyrc2_destination: ~/.dotfiles/config/conky/.conkyrc2
-#    rcup_flags: -f
+    kitty_destination: ~/.dotfiles/config/kitty/kitty.conf
+    openbox_autostart_destination: ~/.dotfiles/config/openbox/autostart
+    openbox_environment_destination: ~/.dotfiles/config/openbox/environment
+    openbox_rcxml_destination: ~/.dotfiles/config/openbox/rc.xml
+    xprofile_destination: ~/.dotfiles/xprofile
+    bashrc_destination: ~/.dotfiles/bashrc
+    zshrc_destination: ~/.dotfiles/zshrc
+    vimrc_destination: ~/.dotfiles/vimrc
+    lsytmplylst_destination: ~/.dotfiles/local/bin/lsytmplylst
+    mpvy_destination: ~/.dotfiles/local/bin/mpvy
+    pulsedroid_server_destination: ~/.dotfiles/local/bin/pulsedroid_server.sh
+    rofi_run_destination: ~/.dotfiles/local/bin/rofi_run
+    s3_cp_chatgpt_destination: ~/.dotfiles/local/bin/s3_cp_chatgpt-session
+    s3_cp_pacman_pkg_caches_destination: ~/.dotfiles/local/bin/s3_cp_pacman_pkg_caches
+    speedtest_destination: ~/.dotfiles/local/bin/speedtest-cli
+    youtube_transcript_api_destination: ~/.dotfiles/local/bin/youtube_transcript_api
+    fcitx5_destination: ~/.dotfiles/config/fcitx5/config
+    jgmenu_append_destination: ~/.dotfiles/config/jgmenu/append.csv
+    jgmenu_rc_destination: ~/.dotfiles/config/jgmenu/jgmenurc
+    jgmenu_prepend_destination: ~/.dotfiles/config/jgmenu/prepend.csv
+    picom_destination: ~/.dotfiles/config/picom.conf
+    redshift_destination: ~/.dotfiles/config/redshift.conf
+    rofi_config_destination: ~/.dotfiles/config/rofi/config.rasi
+    terminator_destination: ~/.dotfiles/config/terminator/config
+    tint2rc_destination: ~/.dotfiles/config/tint2/tint2rc
+    xfce_keyboard_destination: ~/.dotfiles/config/xfce4/xfconf/xfce-perchannel-xml/keyboards.xml
+    xfce_desktop_destination: ~/.dotfiles/config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
+    xfce_keyboard_shortcuts_destination: ~/.dotfiles/config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
+    xfce_panel_destination: ~/.dotfiles/config/xfce4/xfconf/xfce-perchannel-xml/xfce4-panel.xml
+    xfce_power_manager_destination: ~/.dotfiles/config/xfce4/xfconf/xfce-perchannel-xml/xfce4-power-manager.xml
+    xfce_settings_editor_destination: ~/.dotfiles/config/xfce4/xfconf/xfce-perchannel-xml/xfce4-settings-editor.xml
+    xfce_settings_manager_destination: ~/.dotfiles/config/xfce4/xfconf/xfce-perchannel-xml/xfce4-settings-manager.xml
+    xfwm4_destination: ~/.dotfiles/config/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml
+    #    rcup_flags: -f
 
 ## Desktop
 install_openbox: True
