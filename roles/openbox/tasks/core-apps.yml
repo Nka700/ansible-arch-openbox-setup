@@ -97,6 +97,7 @@
       - nvidia-utils
       - pamixer
       - pavucontrol
+      - playerctl
       - pulseaudio
       - pulseaudio-bluetooth
       - redshift
