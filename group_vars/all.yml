@@ -1,3 +1,4 @@
+
 ### Playbook Configuration Variables
 # You may modify the following variables to customize the playbook to your
 # specific needs, however do not remove any variables, they are all required
@@ -89,7 +90,7 @@ install_terminal_browsers: True
 install_office: True
 
 ## Console-based email client
-install_aerc: True
+#install_aerc: True
 
 ## AUR vars
 use_aur: True
@@ -101,7 +102,6 @@ python:
 
 ## Installs python packages
 install_pythonpkg: True
-
 
 ## tlp vars
 configure_tlp: True

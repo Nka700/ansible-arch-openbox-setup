@@ -1,7 +1,62 @@
 ---
-- hosts: localhost
-  connection: local
-  become: true
+- name: check updates
+  pacman:
+   update_cache: yes
+
+- name: Install and configure zsh
+  roles:
+    - user
+
+- name: Configure pacman (colorize and repos)
+  roles:
+    - pacman
+
+- name: Basic apps (vlc, kitty, etc.)
+  roles:
+    - core-apps
+
+- name: Install and configure zsh
+  roles:
+    - zsh
+  when: setup_zsh == True
+
+- name: Install openbox 
   roles:
     - openbox
-  tags: default
+  when: install_openbox == True
+
+- name: Web Browser
+  roles:
+    - "{{browser}}"
+
+- name: Terminal web browsers
+  roles:
+    - terminal_browsers
+  when: install_terminal_browsers == True
+
+- name: AUR apps
+  roles:
+    - aur
+  when: use_aur == True
+
+- name: python apps
+  roles:
+    - pythonpkg
+  when: install_pythonpkg == True
+
+- name: add user to group
+  roles:
+    - group
+
+- name: Dotfiles
+  roles:
+    - dotfiles
+
+- name: authorized_keys
+  roles:
+    - authorized_keys
+
+- name: Configure tlp
+  roles:
+    - power-management
+  when: configure_tlp == True
