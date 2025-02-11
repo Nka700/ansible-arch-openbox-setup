@@ -5,5 +5,5 @@ Needs to run from localhost.
 # Usage
 
 ```sh
-ansible-playbook -i ${IP}, main.yml --extra-vars "username=${Your user name} upassword=${Your Password}" --user root --ask-pass --ask-become-pass
+ansible-playbook -i ${IP}, main.yml --extra-vars "username=${Your user name} upassword=${Your Password}" --user ${ansible user} --ask-pass --ask-become-pass
 ```
