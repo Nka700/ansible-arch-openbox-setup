@@ -16,6 +16,10 @@
     - ~/.config/conky/
     - ~/.config/tint2/
     - ~/.config/xfce4/xfconf/xfce-perchannel-xml/
+    - ~/.config/fcitx/
+    - ~/.config/fcitx5/
+    - ~/.config/jgmenu/
+    - ~/.config/rofi//
     - ~/.local/bin/
   become: yes
   become_user: "{{ username }}"
@@ -25,6 +29,7 @@
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
     state: link
+    force: true
   loop:
     - { src: "{{ dotfiles.conkyrc1_destination }}", dest: "~/.config/conky/.conkyrc" }
     - { src: "{{ dotfiles.conkyrc2_destination }}", dest: "~/.config/conky/.conkyrc2" }

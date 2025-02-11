@@ -24,6 +24,12 @@
   roles:
     - core-apps
 
+- name: Dotfiles
+  hosts: all
+  become: yes
+  roles:
+    - dotfiles
+
 - name: Install and configure zsh
   hosts: all
   become: yes
@@ -65,12 +71,6 @@
   become: yes
   roles:
     - group
-
-- name: Dotfiles
-  hosts: all
-  become: yes
-  roles:
-    - dotfiles
 
 - name: authorized_keys
   hosts: all
