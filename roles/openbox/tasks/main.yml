@@ -1,49 +1,60 @@
-- name: check updates
-  pacman: 
-   update_cache: yes
 
-# Install and configure zsh
-- include_tasks: user.yml
+- name: install openbox
+  community.general.pacman:
+    name: 
+      - lightdm
+      - lightdm-gtk-greeter
+      - lightdm-gtk-greeter-settings
+      - openbox
+      - xfce4-settings
+    state: present 
+  become: yes
 
-# Configure pacman (colorize and repos)
-- include_tasks: pacman.yml
+- name: enable lightdm
+  systemd:
+    name: lightdm.service
+#    state: restarted
+    daemon_reload: yes
+    enabled: yes
+  become: yes
 
-# Basic apps (vlc, kitty, etc.)
-- include_tasks: core-apps.yml
+- name: mkdir for openbox dotfiles
+  file:
+    path: ~/.config/openbox
+    state: directory
+    mode: '0755'
+  become: yes
+  become_user: "{{ username }}"
 
-# Install and configure zsh
-- include_tasks: zsh.yml
-  when: setup_zsh == True
+- name: link openbox autostart  
+  file:
+    src: "{{ dotfiles.openbox_autostart_destination }}"
+    dest: ~/.config/openbox/autostart
+    state: link
+  become: yes
+  become_user: "{{ username }}"
 
-# Install openbox 
-- include_tasks: openbox.yml
-  when: install_openbox == True
+- name: link openbox environment  
+  file:
+    src: "{{ dotfiles.openbox_environment_destination }}"
+    dest: ~/.config/openbox/environment
+    state: link
+  become: yes
+  become_user: "{{ username }}"
 
-# Web Browser
-- include_tasks: "{{browser}}.yml"
+- name: link openbox rc.xml
+  file:
+    src: "{{ dotfiles.openbox_rcxml_destination }}"
+    dest: ~/.config/openbox/rc.xml
+    state: link
+  become: yes
+  become_user: "{{ username }}"
 
-# Terminal web browsers
-- include_tasks: terminal_browsers.yml
-  when: install_terminal_browsers == True
+- name: link xprofile  
+  file:
+    src: "{{ dotfiles.xprofile_destination }}"
+    dest: ~/.xprofile
+    state: link
+  become: yes
+  become_user: "{{ username }}"
 
-## AUR apps
-- include_tasks: aur.yml
-  when: use_aur == True
-
-## python apps
-- include_tasks: pythonpkg.yml
-  when: install_pythonpkg == True
-
-# add user to group
-- include_tasks: group.yml
-
-# Dotfiles
-- include_tasks: dotfiles.yml
-#  when: pull_dotfiles == True
-
-# authorized_keys
-- include_tasks: authorized_keys.yml
-
-# Configure tlp
-- include_tasks: tlp.yml
-  when: configure_tlp == True
